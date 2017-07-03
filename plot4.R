@@ -18,6 +18,7 @@ plot4 <- function(){
                     plot(Global_active_power, type = "l", ylab = "Global Active Power")
                 # Top-right plot
                     plot(Voltage, type = "l", xaxt = 'n', xlab = "datetime", ylab = "Voltage")
+                    axis(at = c(1, 1440, 2880), side = 1, labels = c("Thu", "Fri", "Sat"))
                 # Bottom-left plot
                     plot(Sub_metering_1, type = "l", ylim = c(0, 38), xaxt = 'n', xlab = "", ylab = "Energy sub metering")
                     par(new = TRUE)
@@ -25,10 +26,10 @@ plot4 <- function(){
                     par(new = TRUE)
                     plot(Sub_metering_3, type = "l", xaxt = 'n', xlab = "", ylab = "", ylim = c(0, 38), col = "blue", axes = FALSE)
                     legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), text.col = c("black", "red", "blue"))
-                    axis(at = c(1, 1440, 2880), side = 1, labels = c("Thursday", "Friday", "Saturday"))
+                    axis(at = c(1, 1440, 2880), side = 1, labels = c("Thu", "Fri", "Sat"))
                 # Bottom-right plot
                     plot(elec$Global_reactive_power, type = "l", xaxt = 'n', xlab = "datetime", ylab = "Global_reactive_power")
-                    axis(at = c(1, 1440, 2880), side = 1, labels = c("Thursday", "Friday", "Saturday"))
+                    axis(at = c(1, 1440, 2880), side = 1, labels = c("Thu", "Fri", "Sat"))
             })
         # Close device and write file
         dev.off()

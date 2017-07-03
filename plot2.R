@@ -13,7 +13,7 @@ plot2 <- function(){
         # Open png device
         png("plot2.png", width = 480, height = 480)
         with(elec, plot(Global_active_power, type = "l", xaxt = 'n', xlab = "", ylab = "Global Active Power (kilowatts)"))
-        axis(at = c(1, 1440, 2880), side = 1, labels = c("Thursday", "Friday", "Saturday"))
+        axis(at = c(1, 1440, 2880), side = 1, labels = c("Thu", "Fri", "Sat"))
         # Close device and write file
         dev.off()
 }

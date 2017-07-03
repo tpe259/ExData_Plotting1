@@ -20,7 +20,7 @@ plot3 <- function(){
                 plot(Sub_metering_3, type = "l", xaxt = 'n', xlab = "", ylab = "", ylim = c(0, 38), col = "blue", axes = FALSE)      
         })
         legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), text.col = c("black", "red", "blue"))
-        axis(at = c(1, 1440, 2880), side = 1, labels = c("Thursday", "Friday", "Saturday"))
+        axis(at = c(1, 1440, 2880), side = 1, labels = c("Thu", "Fri", "Sat"))
         # Close device and write file
         dev.off()
 }
